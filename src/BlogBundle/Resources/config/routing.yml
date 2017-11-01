@@ -1,0 +1,19 @@
+
+BloggerBlogBundle_homepage: # <- The name of the route, referenced in application
+    path: /hello/{name} # <- The path that is matched {denotes parameter}
+    defaults: { _controller: BlogBundle:Default:index }
+index:
+    path:     /index
+    defaults: { _controller: BlogBundle:Page:index }
+
+blog_about:
+    path:     /about
+    defaults: { _controller: BlogBundle:Page:about }
+    requirements:
+        _method: GET
+
+
+
+blog_homepage:
+    path:     /
+    defaults: { _controller: BlogBundle:Default:index }
